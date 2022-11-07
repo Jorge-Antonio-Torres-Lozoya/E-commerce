@@ -1,0 +1,23 @@
+.contenedorRoot{
+    display: flex;
+   margin-top: 10em; 
+
+}
+.columns{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 40px;
+
+}
+.card{
+    height:480px ;
+}
+img{
+    width: 286px;  
+    height: 360px;
+  }
+  .textLoading{
+    text-align: center;
+    width: 100vw;
+  } 
