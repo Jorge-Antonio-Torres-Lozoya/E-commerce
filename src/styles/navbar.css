@@ -1,0 +1,11 @@
+.tagName{
+   margin:0 25px ;
+}
+@media only screen and (max-width: 992px) {
+    .tagName{
+        margin-left: 8px;
+        margin-top: 12px;
+    }
+
+
+}

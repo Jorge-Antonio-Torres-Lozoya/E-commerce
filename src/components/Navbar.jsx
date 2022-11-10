@@ -3,6 +3,7 @@ import { useProductContext } from '../context/SearchContext'
 import { AuthContext } from '../context/AuthContext'
 import { useContext, useEffect, useState } from 'react'
 import { getSingleUser } from '../services/userServices'
+import '../styles/navbar.css'
 const Navbar = () => {
   const { isAuth, user, logout } = useContext(AuthContext)
   const [userData, setUserData] = useState({})
@@ -31,12 +32,12 @@ const Navbar = () => {
         console.log('Ocurrio un error: ' + error.message)
       }
     }
-
     fetchUserData()
-  }, [isAuth])
+  }, [])
 
   return (
     <>
+      {console.log(userData)}
       <nav className=' navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-lg px-4 '>
         <div className='container-fluid'>
           <Link className='navbar-brand' to='/'>Navbar</Link>
@@ -57,7 +58,7 @@ const Navbar = () => {
               isAuth
                 ? (
                   <>
-                    <h5 className='text-white  mx-3'>Hola {userData.first_name}</h5>
+                    <h5 className='text-white tagName'>Hola {userData?.first_name && userData.first_name}</h5>
                     <Link onClick={logout} className='nav-link active  mx-2' aria-current='page' to='/login'>Log out</Link>
                   </>
                   )
