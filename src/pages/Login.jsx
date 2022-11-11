@@ -17,6 +17,7 @@ const Login = () => {
         navigate('/')
       }
     } catch (err) {
+      window.alert('Correo o contraseña incorecta')
       console.log('Ocurrio un erron en Login: ' + err.message)
     }
   }

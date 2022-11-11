@@ -43,9 +43,10 @@ axios.interceptors.request.use(
 const registerUserServices = (data) => axios.post(`${BASE_URL}/signup`, data)
 const loginUserServices = (data) => axios.post(`${BASE_URL}/login`, data)
 const getSingleUser = (id) => axios.get(`${BASE_URL}/user/${id}`)
-
+const loadProduct = (data) => axios.post(`${BASE_URL}/item`, data)
 export {
   registerUserServices,
   loginUserServices,
-  getSingleUser
+  getSingleUser,
+  loadProduct
 }

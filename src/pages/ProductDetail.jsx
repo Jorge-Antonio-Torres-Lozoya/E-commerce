@@ -12,7 +12,9 @@ const ProductDetail = () => {
   const { data, loading } = useGetData(`https://ecomerce-master.herokuapp.com/api/v1/item/${id}`)
   console.log(data)
   console.log(context.search)
-
+  const addDefaultSrc = (ev) => {
+    ev.target.src = imagenDefault
+  }
   return (
     <>
       {
@@ -22,7 +24,7 @@ const ProductDetail = () => {
         <div className=' container-fluid '>
           <div className='contenedor container '>
             <div className='contenedor__cardImage py-4 px-3 '>
-              <img src={data.image ? data.image : imagenDefault} className='contenedor__image img-fluid' alt='...' />
+              <img onError={addDefaultSrc} src={data.image ? data.image : imagenDefault} className='contenedor__image img-fluid' alt='...' />
             </div>
             <div className='contenedor__cardInfo my-4 py-4 px-4'>
               <h1 className='contenedor__textName text-center mb-3'>{data.product_name}</h1>

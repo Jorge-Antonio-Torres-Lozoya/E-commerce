@@ -14,7 +14,7 @@ const SignUp = () => {
         navigate('/login')
       }
     } catch (error) {
-      console.log('Ocurrio un error en Signup: ' + error.message)
+      console.log('Ocurrio un error ' + error.message)
     }
   }
 
