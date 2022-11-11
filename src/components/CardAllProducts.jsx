@@ -14,8 +14,8 @@ const CardAllProducts = ({ product_name, image, price, _id }) => {
         <div className='card' style={{ width: '18rem' }}>
           <img onError={addDefaultSrc} src={image || imagenDefault} className='card-img-top' alt='...' />
 
-          <div className='card-body'>
-            <p className='card-text'>{product_name}</p>
+          <div className='card-body d-flex justify-content-center flex-column align-items-center'>
+            <p className='card-text fs-4'>{product_name}</p>
             <span className='card-text'>${price}</span>
 
           </div>
